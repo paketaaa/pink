@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,700&display=swap" rel="stylesheet"
+    type="text/css">
+  <title>Pink</title>
+</head>
+
+<body>
+
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/logo-pink-white-desktop.svg">
+          <source media="(min-width: 660px)" srcset="./img/logo-pink-white-tablet.svg">
+          <img src="./img/logo-pink-white-mobile.svg" alt="">
+        </picture>
+        <button type="button" class="nav__toggle nav__toggle--closed">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+      <nav class="nav nav--closed">
+        <a href="#" class="nav__item">Главная</a>
+        <a href="#" class="nav__item">Фотографии</a>
+        <a href="#" class="nav__item">Конкурс</a>
+        <a href="#" class="nav__item">paketAAA</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="intro">
+      <!-- <div class="intro__wrapper"> -->
+      <h2 class="intro__title">
+        Взгляните<br class="br--tablet"> на жизнь<br class="br--tablet br--mobile"> иначе!
+      </h2>
+      <!-- </div> -->
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./img/iphone-hand-desktop@1x.png">
+        <source media="(min-width: 660px)" srcset="./img/iphone-hand-tablet@1x.png">
+        <img class="intro__hand" src="./img/iphone-hand-mobile@1x.png" alt="">
+      </picture>
+      <div class="intro__download">
+        <button class="button button--download">
+          Скачать приложение
+        </button>
+        <div class="intro__icons">
+          <a href="#">
+            <img src="./img/logo-apple.svg" alt="">
+          </a>
+          <a href="#">
+            <img src="./img/logo-android.svg" alt="">
+          </a>
+          <a href="#">
+            <img src="./img/logo-microsoft.svg" alt="">
+          </a>
+        </div>
+        <p class="intro__description">
+          Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+body {
+  font-family: "Open Sans";
+}
+
+picture {
+  display: block;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width){
+    max-width: 660px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1200px;
+    padding: 0 130px;
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: 3px solid #FFFFFF;
+  border-radius: 29px;
+  height: 55px;
+  color: #ffffff;
+  font-weight: 700;
+
+  &--download{
+    width: 280px;
+
+    @media(min-width:@tablet-width){
+      width: 300px;
+    }
+  }
+}
+
+.br{
+  &--mobile{
+    @media(min-width:@tablet-width){
+      display: none;
+    }
+  }
+
+  &--tablet{
+    display: none;
+    @media(min-width:@tablet-width){
+      display: inline;
+    }
+  }
+
+}

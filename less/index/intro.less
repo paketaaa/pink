@@ -1,0 +1,178 @@
+.intro {
+  // display: grid;
+  // grid-template-rows: 462px 271px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image:  url(../img/bg-back-tablet@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: auto 462px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(min-width:@tablet-width){
+    background-image: url(../img/bg-back-tablet@1x.jpg);
+    // background-position: center;
+    background-size: auto 729px;
+
+    display: grid;
+    grid-template-columns: 330px 330px;
+    grid-template-rows: 365px 365px;
+    grid-template-areas:
+    "title ."
+    "download .";
+
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  @media(min-width:@desktop-width){
+    background-image: url(../img/bg-back-desktop@1x.jpg);
+    background-size: auto 853px;
+
+    grid-template-columns: 473px 727px;
+    grid-template-rows: 426.5px 426.5px;
+  }
+
+  &__hand{
+  transform: translateX(-30px);
+  // grid-area: phone;
+
+    @media(min-width:@tablet-width){
+      transform: translateX(0px);
+      grid-area: hand;
+      position: absolute;
+      right: calc(50% - 356.5px);
+      bottom: 0;
+    }
+
+    @media(min-width:@desktop-width){
+      left: calc(50% - 477.5px);
+    }
+  }
+
+
+  &__title{
+    position: relative;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+
+    margin: 0;
+    padding: 26px 0;
+    padding-top: 92px;
+
+    display: flex;
+    justify-content: center;
+
+    width: 280px;
+
+    @media(min-width:@tablet-width){
+      grid-area: title;
+      font-size: 40px;
+      line-height: 120%;
+      padding-bottom: 18px;
+      align-self: end;
+      width: auto;
+    }
+
+    @media(min-width:@desktop-width){
+      font-size: 50px;
+      line-height: 68px;
+
+    }
+
+    // @media(min-width: @tablet-width){
+    //   padding-top: 139px;
+    //   background-image: none;
+    // }
+
+    // &::after {
+    //   content: url(../../img/iphone-hand-mobile@1x.png);
+    //   // position: absolute;
+    //   // top: 176px;
+    //   // left: 0;
+    //   display: block;
+    //   transform: translate3d(-30px, 22px, 0);
+    //   z-index: -1;
+
+    //   @media(min-width:@tablet-width){
+    //     content: url(../../img/iphone-hand-tablet@1x.png);
+    //   }
+    // }
+  }
+
+  &__download{
+    background-color: #1D2631;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    padding-top: 28px;
+    padding-bottom: 38px;
+    z-index: 1;
+    width: 100%;
+
+
+
+    @media(min-width: @tablet-width){
+      grid-area: download;
+      background-color: transparent;
+      padding: 0;
+      padding-top: 13px;
+      padding-right: 10px;
+      padding-left: 20px;
+      align-self: baseline;
+    }
+
+    @media(min-width: @tablet-width){
+      padding-top: 25px;
+    }
+  }
+
+  &__description{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    text-align: center;
+
+    margin: 0;
+    // margin-top: 38px;
+
+    @media(min-width:@tablet-width){
+      font-size: 18px;
+
+    }
+  }
+
+  &__icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 35px;
+    align-items: center;
+    // margin-top: 32px;
+    // margin-bottom: 38px;
+    // width: 100%;
+    // justify-content: space-between;
+    // margin: 0 58px;
+    margin: 0;
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+    @media(min-width:@tablet-width){
+      margin-top: 46px;
+      margin-bottom: 38px;
+    }
+
+    @media(min-width:@desktop-width){
+      margin-top: 67px;
+      margin-bottom: 58px;
+    }
+  }
+}
