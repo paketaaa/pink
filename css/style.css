@@ -363,7 +363,7 @@ img {
   }
 }
 .offer {
-  background-image: url(../../img/grey-background-mobile.svg);
+  background-image: url(../img/grey-background-mobile.svg);
   background-position: bottom;
   background-position-y: 165px;
   background-repeat: no-repeat;
@@ -376,14 +376,14 @@ img {
 }
 @media (min-width: 660px) {
   .offer {
-    background-image: url(../../img/grey-background-tablet.svg);
+    background-image: url(../img/grey-background-tablet.svg);
     background-position-y: 230px;
     overflow: visible;
   }
 }
 @media (min-width: 1200px) {
   .offer {
-    background-image: url(../../img/grey-background-desktop.svg);
+    background-image: url(../img/grey-background-desktop.svg);
     background-position-y: 390px;
   }
 }
