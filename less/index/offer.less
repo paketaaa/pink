@@ -4,10 +4,21 @@
   background-position-y: 165px;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+
+
+  @media(max-width:@mobile-width-only){
+    overflow: hidden;
+  }
 
   @media(min-width: @tablet-width){
+    background-image: url(../../img/grey-background-tablet.svg);
     background-position-y: 230px;
+    overflow: visible;
+  }
+
+  @media(min-width: @desktop-width){
+    background-image: url(../../img/grey-background-desktop.svg);
+    background-position-y: 390px;
   }
 
 
@@ -62,12 +73,77 @@
     padding: 0;
     margin: 0;
     padding-top: 44px;
+
+    @media(min-width: @tablet-width){
+      text-align: left;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: max-content max-content max-content;
+      grid-template-areas:
+      ". mood"
+      ". world"
+      ". friends";
+
+      row-gap: 40px;
+
+      padding-top: 65px;
+
+
+      // display: flex;
+      // flex-direction: column;
+      // align-items:baseline;
+      // justify-content: end;
+
+      position: relative;
+
+      align-content: flex-end;
+    }
+
+    @media(min-width: @desktop-width){
+      text-align: center;
+
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "mood world friends";
+      gap: 0;
+
+      // padding: 0 24px;
+    }
   }
 
   &__item{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media(min-width: @tablet-width){
+      // padding-bottom: 46px;
+
+      align-items: flex-start;
+      &:nth-child(1){
+        grid-area: mood;
+      }
+
+      &:nth-child(2){
+        grid-area: world;
+      }
+
+      &:nth-child(3){
+        grid-area: friends;
+        padding-bottom: 30px;
+
+        @media(min-width: @desktop-width){
+          padding: 0;
+        }
+      }
+    }
+
+    @media(min-width: @desktop-width){
+      // align-items: center;
+      // justify-content: space-between;
+      // max-width: 272px;
+      margin: 0 10px;
+    }
   }
 
   &__subtitle{
@@ -78,6 +154,19 @@
     margin: 0;
     margin-top: 43px;
     margin-bottom: 24px;
+
+    @media(min-width: @tablet-width){
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    @media(min-width: @desktop-width){
+      order: 2;
+      font-size: 30px;
+      line-height: 30px;
+      margin: 0 24px;
+      margin-bottom: 25px;
+    }
   }
 
   &__text{
@@ -87,12 +176,40 @@
     color: @customblue;
 
     margin: 0;
+
+    @media(min-width: @desktop-width){
+      order: 3;
+      font-size: 18px;
+      line-height: 30px;
+      margin: 0 24px;
+    }
   }
 
   &__phone{
+    @media(min-width: @desktop-width){
+      order: 1;
+      margin-bottom: 59px;
+    }
+
     &--3{
-      margin-top: 48px;
+      @media(max-width: @mobile-width-only){
+        margin-top: 48px;
+      }
+
       transform: translateY(35px);
+
+      @media(min-width: @tablet-width){
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: none;
+        // margin: 0;
+      }
+
+      @media(min-width: @desktop-width){
+        position: static;
+        // margin-bottom: 59px;
+      }
     }
   }
 }

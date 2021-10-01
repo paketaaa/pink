@@ -368,11 +368,23 @@ img {
   background-position-y: 165px;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+}
+@media (max-width: 659px) {
+  .offer {
+    overflow: hidden;
+  }
 }
 @media (min-width: 660px) {
   .offer {
+    background-image: url(../../img/grey-background-tablet.svg);
     background-position-y: 230px;
+    overflow: visible;
+  }
+}
+@media (min-width: 1200px) {
+  .offer {
+    background-image: url(../../img/grey-background-desktop.svg);
+    background-position-y: 390px;
   }
 }
 .offer__title {
@@ -419,10 +431,57 @@ img {
   margin: 0;
   padding-top: 44px;
 }
+@media (min-width: 660px) {
+  .offer__list {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: -webkit-max-content -webkit-max-content -webkit-max-content;
+    grid-template-rows: max-content max-content max-content;
+    grid-template-areas: ". mood" ". world" ". friends";
+    row-gap: 40px;
+    padding-top: 65px;
+    position: relative;
+    align-content: flex-end;
+  }
+}
+@media (min-width: 1200px) {
+  .offer__list {
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "mood world friends";
+    gap: 0;
+  }
+}
 .offer__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 660px) {
+  .offer__item {
+    align-items: flex-start;
+  }
+  .offer__item:nth-child(1) {
+    grid-area: mood;
+  }
+  .offer__item:nth-child(2) {
+    grid-area: world;
+  }
+  .offer__item:nth-child(3) {
+    grid-area: friends;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 660px) and (min-width: 1200px) {
+  .offer__item:nth-child(3) {
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .offer__item {
+    margin: 0 10px;
+  }
 }
 .offer__subtitle {
   font-weight: 700;
@@ -432,6 +491,21 @@ img {
   margin-top: 43px;
   margin-bottom: 24px;
 }
+@media (min-width: 660px) {
+  .offer__subtitle {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .offer__subtitle {
+    order: 2;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 24px;
+    margin-bottom: 25px;
+  }
+}
 .offer__text {
   font-weight: 400;
   font-size: 14px;
@@ -439,9 +513,126 @@ img {
   color: #283645;
   margin: 0;
 }
+@media (min-width: 1200px) {
+  .offer__text {
+    order: 3;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .offer__phone {
+    order: 1;
+    margin-bottom: 59px;
+  }
+}
 .offer__phone--3 {
-  margin-top: 48px;
   transform: translateY(35px);
+}
+@media (max-width: 659px) {
+  .offer__phone--3 {
+    margin-top: 48px;
+  }
+}
+@media (min-width: 660px) {
+  .offer__phone--3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: none;
+  }
+}
+@media (min-width: 1200px) {
+  .offer__phone--3 {
+    position: static;
+  }
+}
+.effect {
+  display: none;
+}
+@media (min-width: 660px) {
+  .effect {
+    display: block;
+    background-color: transparent;
+  }
+}
+@media (min-width: 1200px) {
+  .effect {
+    background-color: #F2F2F2;
+  }
+}
+.effect .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 330px;
+  align-items: end;
+}
+@media (min-width: 1200px) {
+  .effect .container {
+    grid-template-columns: 370px 570px;
+    grid-template-rows: 429px;
+    align-items: center;
+  }
+}
+.effect__info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+@media (min-width: 1200px) {
+  .effect__info {
+    margin-right: 0;
+  }
+}
+.effect__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  .effect__title {
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .effect__title br {
+    display: none;
+  }
+}
+.effect__text {
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.effect__text .br--desktop {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .effect__text {
+    margin-bottom: 40px;
+    margin-right: 110px;
+  }
+  .effect__text br {
+    display: none;
+  }
+  .effect__text .br--desktop {
+    display: inline;
+  }
+}
+.effect__link {
+  font-size: 14px;
+  line-height: 24px;
+  color: #D22856;
+  margin-bottom: 25px;
+}
+@media (min-width: 1200px) {
+  .effect__link {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
