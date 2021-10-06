@@ -62,6 +62,19 @@ img {
   &--download{
     width: 280px;
 
+    transition-duration: 0.2s;
+
+    &:hover,
+    &:focus{
+      background-color: #ffffff;
+      color: @custompink;
+    }
+
+    &:active{
+      background-color: #ffffff;
+      color: #D2285660;
+    }
+
     @media(min-width:@tablet-width){
       width: 300px;
     }

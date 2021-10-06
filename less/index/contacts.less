@@ -1,0 +1,140 @@
+.contacts{
+  color: @customblue;
+  text-align: center;
+
+
+  & .container{
+    width: 320px;
+    height: 395px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-bottom: 20px;
+    padding-top: 50px;
+
+    @media(min-width:@tablet-width){
+      width: 660px;
+      height: 405px;
+
+      padding-top: 55px;
+      padding-bottom: 25px;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media(min-width:@desktop-width){
+      width: 1200px;
+      height: 365px;
+
+      padding-top: 70px;
+      padding-bottom: 0;
+      margin-bottom: 70px;
+    }
+  }
+
+  & iframe{
+    height: 200px;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    position: relative;
+
+    @media(min-width:@tablet-width){
+      height: 375px;
+    }
+
+    @media(min-width:@desktop-width){
+      height: 500px;
+    }
+  }
+
+  &__title{
+    margin: 0;
+    // margin-top: 50px;
+    margin-bottom: 30px;
+
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media(min-width:@tablet-width){
+      font-size: 40px;
+      line-height: 54px;
+
+      width: 100%;
+
+      margin-bottom: 40px;
+    }
+
+    @media(min-width:@desktop-width){
+      font-size: 50px;
+      line-height: 68px;
+
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item{
+    margin-bottom: 15px;
+
+    @media(min-width:@tablet-width){
+      width: 50%;
+    }
+
+    @media(min-width:@desktop-width){
+      width: 33%;
+
+      &:nth-child(2){
+        order: 1;
+      }
+
+      &:nth-child(3){
+        order: 3;
+      }
+
+      &:nth-child(4){
+        order: 2;
+      }
+    }
+  }
+
+  &__subtitle{
+    margin: 0;
+    // margin-bottom: 5px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+
+    @media(min-width:@tablet-width){
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text{
+    margin: 0;
+
+    display: inline;
+
+    color: @custompink;
+    text-decoration: none;
+
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+
+    &:hover,
+    &:focus{
+      text-decoration: underline;
+      color: #000000;
+    }
+
+    &:active{
+      color: #00000030;
+    }
+  }
+}
