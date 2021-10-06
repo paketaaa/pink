@@ -15,15 +15,29 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 330px;
     align-items: end;
+    grid-template-areas: ". info";
+
+    background-image: url(../img/clocks.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 238px 276px;
+    background-position-x: 20px;
 
     @media(min-width:@desktop-width){
       grid-template-columns: 370px 570px;
       grid-template-rows: 429px;
       align-items: center;
+
+      background-size: auto;
+      background-position-x: 130px;
     }
   }
 
   &__clock{
+    @media(min-width:@desktop-width){
+      width: 298px;
+      height: 345px;
+    }
 
   }
 
@@ -31,6 +45,8 @@
     display: flex;
     flex-direction: column;
     margin-right: 10px;
+
+    grid-area: info;
 
     @media(min-width:@desktop-width){
       margin-right: 0;
